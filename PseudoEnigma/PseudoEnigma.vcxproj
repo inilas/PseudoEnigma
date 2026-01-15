@@ -134,11 +134,13 @@
     <ClCompile Include="rotorA.cpp" />
     <ClCompile Include="rotorB.cpp" />
     <ClCompile Include="rotorC.cpp" />
+    <ClCompile Include="rotorComprobation.cpp" />
     <ClCompile Include="rotorConfig.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mesageEncrypt.h" />
     <ClInclude Include="mesageUnEncrypt.h" />
+    <ClInclude Include="rotorComprobation.h" />
     <ClInclude Include="rotorConfig.h" />
     <ClInclude Include="rotorABCConfig.h" />
   </ItemGroup>
