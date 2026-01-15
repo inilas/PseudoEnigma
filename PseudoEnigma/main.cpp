@@ -18,15 +18,15 @@ int main()
 			{
 				if (GetAsyncKeyState(inputUser) == -32767) //si la tecla pasada por esta funcion da ese numero, significa que está precionada
 				{
-					if (inputUser==31)
+					if (inputUser==49)
 					{
 						mesageEncrypt();
 					}
-					else if (inputUser==32)
+					else if (inputUser==50)
 					{
 						mesageUnEncrypt();
 					}
-					else if (inputUser==33)
+					else if (inputUser==51)
 					{
 						rotorConfig();
 					}
