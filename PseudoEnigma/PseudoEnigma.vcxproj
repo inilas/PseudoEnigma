@@ -130,12 +130,16 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mesageEncypt.cpp" />
     <ClCompile Include="mesageUnEncrypt.cpp" />
+    <ClCompile Include="rotorA.cpp" />
+    <ClCompile Include="rotorB.cpp" />
+    <ClCompile Include="rotorC.cpp" />
     <ClCompile Include="rotorCondig.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mesageEncrypt.h" />
     <ClInclude Include="mesageUnEncrypt.h" />
     <ClInclude Include="rotorConfig.h" />
+    <ClInclude Include="rotorABCConfig.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

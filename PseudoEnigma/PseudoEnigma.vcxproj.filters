@@ -27,6 +27,15 @@
     <ClCompile Include="rotorCondig.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="rotorA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rotorB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rotorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mesageEncrypt.h">
@@ -36,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="rotorConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rotorABCConfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

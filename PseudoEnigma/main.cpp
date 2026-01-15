@@ -2,40 +2,44 @@
 #include"mesageEncrypt.h"
 #include"mesageUnEncrypt.h"
 #include"rotorConfig.h"
+#include<Windows.h>
 int main()
 {
-	short inputUser;
+
+	char inputUser;
 	bool bucle = 1;
-	while (bucle)
-	{
 		std::cout <<"		==============================\n			ENIGMA MACHINE\n		==============================\n";
 		std::cout << "			1. Encrypt Message\n\n			2. Decrypt Message\n\n			3. Configure Rotors\n\n			4. Exit\n";
 		
-		std::cin >> inputUser;
-
-		switch (inputUser)
+		
+		while (true)
 		{
-		case 1:
-			mesageEncrypt();
-
-			break;
-		case 2:
-			mesageUnEncrypt();
-
-			break;
-		case 3:
-			rotorConfig();
-
-			break;
-		case 4:
-			return 1;
-			break;
-		default:
-			std::cout<<"There was a error, try tiping \"1\",\"2\",\"3\" or \"4\"\n";
-			system("pause");
-			system("cls");
-			continue;
+			for (inputUser = 0; inputUser < 255; inputUser++) //comprueba cada tecla todo el rato
+			{
+				if (GetAsyncKeyState(inputUser) == -32767) //si la tecla pasada por esta funcion da ese numero, significa que está precionada
+				{
+					if (inputUser==31)
+					{
+						mesageEncrypt();
+					}
+					else if (inputUser==32)
+					{
+						mesageUnEncrypt();
+					}
+					else if (inputUser==33)
+					{
+						rotorConfig();
+					}
+				}
+			}
+			std::cout << inputUser;
+			Sleep(100);
 		}
-	}
 
-}	
+
+
+
+
+}
+
+	
