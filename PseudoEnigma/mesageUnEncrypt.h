@@ -1,2 +1,2 @@
 #pragma once
-void mesageUnEncrypt();
+void mesageDecrypt();

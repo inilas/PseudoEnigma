@@ -8,36 +8,44 @@ int main()
 
 	char inputUser;
 	bool bucle = 1;
-		std::cout <<"		==============================\n			ENIGMA MACHINE\n		==============================\n";
+
+	while (true)
+	{
+		system("cls");
+		std::cout << "		==============================\n			ENIGMA MACHINE\n		==============================\n";
 		std::cout << "			1. Encrypt Message\n\n			2. Decrypt Message\n\n			3. Configure Rotors\n\n			4. Exit\n";
-		
-		
-		while (true)
+
+
+		while (bucle)
 		{
-			for (inputUser = 0; inputUser < 255; inputUser++) //comprueba cada tecla todo el rato
+			if (GetAsyncKeyState(49) == -32767) //If key number 1 "1" is presed send user to messageEncrypt.cpp
 			{
-				if (GetAsyncKeyState(inputUser) == -32767) //si la tecla pasada por esta funcion da ese numero, significa que está precionada
-				{
-					if (inputUser==49)
-					{
-						mesageEncrypt();
-					}
-					else if (inputUser==50)
-					{
-						mesageUnEncrypt();
-					}
-					else if (inputUser==51)
-					{
-						rotorConfig();
-					}
-				}
+				messageEncrypt(); //going to messageEncrypt.cpp
+				break;
 			}
-			std::cout << inputUser;
+
+			if (GetAsyncKeyState(50) == -32767) //If key number 2 "2" is presed send user to messageDecrypt.cpp
+			{
+				mesageDecrypt(); //going to messageDecrypt.cpp
+				break;
+			}
+			if (GetAsyncKeyState(51) == -32767) //If key number 3 "3" is presed send user to rotorConfig.cpp
+			{
+				rotorConfig(); //going to rotorConfig.cpp
+				break;
+			}
+			if (GetAsyncKeyState(52) == -32767) //If key number 4 "4" is presed program ends
+			{
+				return 1;
+			}
+
 			Sleep(100);
 		}
+	}
+		
 
 
-
+		return 0;
 
 
 }

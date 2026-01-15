@@ -18,13 +18,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mesageEncypt.cpp">
+    <ClCompile Include="messageEncypt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mesageUnEncrypt.cpp">
+    <ClCompile Include="mesageDecrypt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="rotorCondig.cpp">
+    <ClCompile Include="rotorConfig.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="rotorA.cpp">

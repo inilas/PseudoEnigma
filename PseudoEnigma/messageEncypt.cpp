@@ -1,5 +1,5 @@
 #include<iostream>
-void mesageEncrypt()
+void messageEncrypt()
 {
 	system("cls");
 	std::cout << "What mesage do you want to encript?";
