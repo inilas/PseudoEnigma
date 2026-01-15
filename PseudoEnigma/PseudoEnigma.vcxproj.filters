@@ -36,6 +36,9 @@
     <ClCompile Include="rotorC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="getMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mesageEncrypt.h">

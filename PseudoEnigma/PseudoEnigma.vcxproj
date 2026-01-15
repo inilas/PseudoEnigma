@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="getMessage.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="messageEncypt.cpp" />
     <ClCompile Include="mesageDecrypt.cpp" />
