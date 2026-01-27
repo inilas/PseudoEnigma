@@ -13,16 +13,21 @@ void rotorConfig()
 	{
 		if (GetAsyncKeyState(49) == -32767) //If key number 1 "1" is presed send user to messageEncrypt.cpp
 		{
-			rotorAConfig();
+			if (rotorAConfig())
+				return;
+			
 		}
 
 		if (GetAsyncKeyState(50) == -32767) //If key number 2 "2" is presed send user to messageDecrypt.cpp
 		{
-			rotorBConfig();
+			if (rotorBConfig())
+				return;
+			
 		}
 		if (GetAsyncKeyState(51) == -32767) //If key number 3 "3" is presed send user to rotorConfig.cpp
 		{
-			rotorCConfig();
+			if (rotorCConfig())
+				return;
 		}
 		if (GetAsyncKeyState(52) == -32767) //If key number 4 "4" is presed program ends
 		{

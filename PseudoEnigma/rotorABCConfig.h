@@ -1,4 +1,4 @@
 #pragma once
-void rotorAConfig();
-void rotorBConfig();
-void rotorCConfig();
+bool rotorAConfig();
+bool rotorBConfig();
+bool rotorCConfig();

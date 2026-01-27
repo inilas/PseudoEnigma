@@ -3,24 +3,29 @@
 #include<string>
 #include"rotorComprobation.h"
 #include<Windows.h>
-void rotorAConfig()
+bool rotorAConfig()
 {
 	system("cls");
-	std::cout << "Rotor A configuration:\nPress \"Esc\" to exit or ";
+	std::cout << "Rotor A configuration:\nPress \"Esc\"\n";
+	
 	while (true)
 	{
 		
 		
 		if (GetAsyncKeyState(VK_ESCAPE) == -32767) //If key number 1 "1" is presed send user to messageEncrypt.cpp
 		{
-			return;
+			return 0;
 		}
 			system("pause");
-			std::cout << "Starting configuration...\nInsert the characters ordenation:";
+			system("cls");
+			std::cout << "Starting configuration of rotor A...\nInsert the characters ordenation:";
 			std::string rotorConfi;
 			Sleep(100);
-			rotorComprobation(rotorConfi, 'A');
-
+			if (rotorComprobation(rotorConfi, 'A'))
+			{
+				return 1;
+			}
+			
 	
 		
 	}
