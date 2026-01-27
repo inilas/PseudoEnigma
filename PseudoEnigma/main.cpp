@@ -18,6 +18,7 @@ int main()
 
 		while (bucle)
 		{
+			
 			if (GetAsyncKeyState(49) == -32767) //If key number 1 "1" is presed send user to messageEncrypt.cpp
 			{
 				messageEncrypt(); //going to messageEncrypt.cpp

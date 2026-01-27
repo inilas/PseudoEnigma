@@ -1,30 +1,45 @@
 #include<iostream>
 #include<fstream>
+#include<string>
 void rotorComprobation(std::string rotorConfi,char letter)
 {
-	if (rotorConfi.length() != 25)
+	int count;
+	std::cin.clear();
+	getline(std::cin, rotorConfi);
+	std::cout << rotorConfi.length();
+
+	if (rotorConfi.length() != 26)
 	{
-		std::cout << "Error: there's no all the alphabetic letters";
+		std::cout << "Error: Key must contain 26 characters.\n";
 		return;
 	}
-	else
-	{
-		for (short i = 0; i < rotorConfi.length(); i++)
-		{
-			for (short j = 0; j < rotorConfi.length(); j++)
-			{
-				if (i != j)
-				{
-					if (rotorConfi[i] != rotorConfi[j])
-					{
-						std::cout << "Error: theres a duplicate letter";
-						return;
-					}
-				}
+	int l = rotorConfi.length();
 
+
+
+	for (int i = 0; i < l; i++) 
+	{
+		count = 1; //Updates the count again to 1 for every new character
+
+		for (int j = i + 1; j < l; j++)
+		{
+			if (rotorConfi[i] == rotorConfi[j] && rotorConfi[i] != ' ')
+			{
+				count++;
+				//Set string[j] to 0 to avoid printing the visited character 
+				rotorConfi[j] = '0';
 			}
 		}
+		if (count > 1 && rotorConfi[i] != '0')
+			std::cout << "Error: "<<rotorConfi[i]<<" its repited";
+			
+		return;
 	}
+
+	
+
+
+	
 
 
 	std::ofstream rotorABCConfi;
