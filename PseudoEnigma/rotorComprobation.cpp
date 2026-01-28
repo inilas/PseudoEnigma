@@ -47,7 +47,9 @@ bool rotorComprobation(std::string rotorConfi,char letter)
 	}
 	else
 	{
+		rotorABCConfi << rotorConfi;
 		std::cout << "Configuration completed!";
+		rotorABCConfi.close();
 		Sleep(700);
 		return 1;
 	}
