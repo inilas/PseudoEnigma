@@ -138,6 +138,7 @@
     <ClCompile Include="rotorConfig.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="getMessage.h" />
     <ClInclude Include="mesageEncrypt.h" />
     <ClInclude Include="mesageUnEncrypt.h" />
     <ClInclude Include="rotorComprobation.h" />

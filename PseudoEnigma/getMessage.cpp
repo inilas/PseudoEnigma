@@ -6,9 +6,19 @@ std::string getMessage() {
     std::string messageToCypher;
     std::string cleanMessage;
 
-    std::cout << "Introduce un mensaje para cifrar: ";
     std::getline(std::cin, messageToCypher);
 
+    std::ofstream messageFile;
+    messageFile.open("Message.txt");
+    
+    if (messageFile.is_open()) {
+        messageFile << messageToCypher;
+    }
+    else
+    {
+        std::cout << "The original message hasn't been able to get saved.";
+    }
+    messageFile.close();
     for (int i = 0; i < messageToCypher.length(); i++) {
         char c = messageToCypher[i];
 
