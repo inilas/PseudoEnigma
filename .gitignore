@@ -416,3 +416,9 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+
+#Archivos generados por enigma
+Message.txt
+Encrypted.txt
+Decrypted.txt
