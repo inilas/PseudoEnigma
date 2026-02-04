@@ -2,25 +2,29 @@
 #include <fstream>
 #include <string>
 
-std::string getMessage() {
-    std::string messageToCypher;
-    std::string cleanMessage;
-
-    std::getline(std::cin, messageToCypher);
+void insertMesajeTxt(std::string inputMessage) {
 
     std::ofstream messageFile;
     messageFile.open("Message.txt");
-    
+
     if (messageFile.is_open()) {
-        messageFile << messageToCypher;
+        messageFile << inputMessage;
     }
     else
     {
         std::cout << "The original message hasn't been able to get saved.";
     }
     messageFile.close();
-    for (int i = 0; i < messageToCypher.length(); i++) {
-        char c = messageToCypher[i];
+    
+}
+
+
+
+std::string cleanMessage (std::string rawMessage)
+{   
+    std::string cleanedMessage;
+    for (int i = 0; i < rawMessage.length(); i++) {
+        char c = rawMessage[i];
 
         // Convertir manualmente a mayúscula
         if (c >= 'a' && c <= 'z') {
@@ -29,9 +33,9 @@ std::string getMessage() {
 
         // Solo aceptar A-Z
         if (c >= 'A' && c <= 'Z') {
-            cleanMessage += c;
+            cleanedMessage += c;
         }
     }
 
-    return cleanMessage;
+    return cleanedMessage;
 }

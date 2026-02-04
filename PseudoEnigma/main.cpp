@@ -23,7 +23,7 @@ int main()
 			if (GetAsyncKeyState(49) == -32767) //If key number 1 "1" is presed send user to messageEncrypt.cpp
 			{
 				std::cout << "Insert a message to cypher: ";
-				std::cout << getMessage();
+				//Te he movido std::cout << insertMesajeTxt(); a el archivo de encriptar -------------------------------------------------------------
 				messageEncrypt(); //going to messageEncrypt.cpp
 				break;
 			}
@@ -31,7 +31,6 @@ int main()
 			if (GetAsyncKeyState(50) == -32767) //If key number 2 "2" is presed send user to messageDecrypt.cpp
 			{
 				std::cout << "Insert a message to decypher: ";
-				std::cout << getMessage();
 				mesageDecrypt(); //going to messageDecrypt.cpp
 				break;
 			}

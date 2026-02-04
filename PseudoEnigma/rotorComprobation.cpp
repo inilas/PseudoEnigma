@@ -2,14 +2,16 @@
 #include<fstream>
 #include<string>
 #include<Windows.h>
+#include"getMessage.h"
 bool rotorComprobation(std::string rotorConfi,char letter)
 {
 	int count;
 	std::cin.clear();
 	getline(std::cin, rotorConfi);
+	std::string cleanedMessage=cleanMessage(rotorConfi);
 //	std::cout << rotorConfi.length();
 
-	if (rotorConfi.length() != 26)
+	if (cleanedMessage.length() != 26)
 	{
 		std::cout << "Error: Key must contain 26 characters.\n";
 		return 0;
@@ -18,17 +20,17 @@ bool rotorComprobation(std::string rotorConfi,char letter)
 	
 	
 	
-	int l = rotorConfi.length();
+	int l = cleanedMessage.length();
 
 	for (int i = 0; i < l; i++) {
-		if (rotorConfi[i] == ' ' || rotorConfi[i] == '0') continue;
+		if (cleanedMessage[i] == ' ' || cleanedMessage[i] == '0') continue;
 
 		int count = 1;
 		for (int j = i + 1; j < l; j++) {
-			if (rotorConfi[i] == rotorConfi[j]) {
+			if (cleanedMessage[i] == cleanedMessage[j]) {
 				count++;
 				if (count > 1) {
-					std::cout << "ERROR: '" << rotorConfi[i] << "' repeated " << count << " times\n";
+					std::cout << "ERROR: '" << cleanedMessage[i] << "' repeated " << count << " times\n";
 					return 0;  // Has duplicate
 				}
 			}
@@ -47,7 +49,7 @@ bool rotorComprobation(std::string rotorConfi,char letter)
 	}
 	else
 	{
-		rotorABCConfi << rotorConfi;
+		rotorABCConfi << cleanedMessage;
 		std::cout << "Configuration completed!";
 		rotorABCConfi.close();
 		Sleep(700);

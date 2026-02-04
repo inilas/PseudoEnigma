@@ -1,3 +1,4 @@
 #pragma once
 #include <string>
-std::string getMessage();
+void insertMesajeTxt(std::string inputMessage);
+std::string cleanMessage(std::string rawMessage);
