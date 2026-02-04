@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-void insertMesajeTxt(std::string inputMessage) {
+void insertMessageTxt(std::string inputMessage) {
 
     std::ofstream messageFile;
     messageFile.open("Message.txt");
