@@ -140,7 +140,7 @@
   <ItemGroup>
     <ClInclude Include="getMessage.h" />
     <ClInclude Include="mesageEncrypt.h" />
-    <ClInclude Include="mesageUnEncrypt.h" />
+    <ClInclude Include="mesageDecrypt.h" />
     <ClInclude Include="rotorComprobation.h" />
     <ClInclude Include="rotorConfig.h" />
     <ClInclude Include="rotorABCConfig.h" />

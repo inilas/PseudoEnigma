@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include<Windows.h>
 
 void insertMessageTxt(std::string inputMessage) {
 
@@ -38,4 +39,34 @@ std::string cleanMessage (std::string rawMessage)
     }
 
     return cleanedMessage;
+}
+
+void mesageAnimation()
+{
+	system("pause");
+	system("cls");
+	std::cout << "Preparing rotor A";
+	Sleep(200);
+	std::cout << ".";
+	Sleep(400);
+	std::cout << ".";
+	Sleep(200);
+	std::cout << ".";
+	std::cout << " Rotor A ready!\n";
+	std::cout << "Preparing rotor b";
+	Sleep(200);
+	std::cout << ".";
+	Sleep(400);
+	std::cout << ".";
+	Sleep(200);
+	std::cout << ".";
+	std::cout << " Rotor B ready!\n";
+	std::cout << "Preparing rotor C";
+	Sleep(200);
+	std::cout << ".";
+	Sleep(400);
+	std::cout << ".";
+	Sleep(200);
+	std::cout << ".";
+	std::cout << " Rotor C ready!\n";
 }

@@ -47,7 +47,7 @@
     <ClInclude Include="mesageEncrypt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mesageUnEncrypt.h">
+    <ClInclude Include="mesageDecrypt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="rotorConfig.h">
