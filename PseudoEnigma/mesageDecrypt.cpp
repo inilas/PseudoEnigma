@@ -4,10 +4,11 @@
 #include<Windows.h>
 void mesageDecrypt()
 {
+	std::string rotorOrdenation;
 	system("cls");
 	std::cout << "Decrypt section:\n";
 
-	mesageAnimation();
+	mesageAnimation(rotorOrdenation);
 
 	std::cout << "Ready to Decrypt!\n";
 	std::cout << "What mesage do you want to Decrypt?\n";

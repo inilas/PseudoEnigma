@@ -41,32 +41,95 @@ std::string cleanMessage (std::string rawMessage)
     return cleanedMessage;
 }
 
-void mesageAnimation()
+
+char cleanNotch(char& notch)
 {
-	system("pause");
-	system("cls");
-	std::cout << "Preparing rotor A";
-	Sleep(200);
-	std::cout << ".";
-	Sleep(400);
-	std::cout << ".";
-	Sleep(200);
-	std::cout << ".";
-	std::cout << " Rotor A ready!\n";
-	std::cout << "Preparing rotor b";
-	Sleep(200);
-	std::cout << ".";
-	Sleep(400);
-	std::cout << ".";
-	Sleep(200);
-	std::cout << ".";
-	std::cout << " Rotor B ready!\n";
-	std::cout << "Preparing rotor C";
-	Sleep(200);
-	std::cout << ".";
-	Sleep(400);
-	std::cout << ".";
-	Sleep(200);
-	std::cout << ".";
-	std::cout << " Rotor C ready!\n";
+	if (notch >= 'a' && notch <= 'z') {
+		notch = notch - ('a' - 'A');
+	}
+	if (notch >= 'A' && notch <= 'Z') {
+		return notch;
+	}
+	else
+	{
+		std::cout << "There's an error reading notch, try again.";
+		system("pause");
+	}
+}
+
+bool correctRotorOrdenation(std::string rotorOrdenation)
+{
+	short stringLenght = rotorOrdenation.length();
+
+	
+	if (stringLenght !=3)
+	{
+		std::cout << "You must introduce 3 letters\n";
+		system("pause");
+		return 1;
+	}
+	for (int i = 0; i < stringLenght; i++) 
+	{
+		if (rotorOrdenation[i]!='A' && rotorOrdenation[i]!='B' && rotorOrdenation[i]!='C')
+		{
+			std::cout << "There's not a rotor \"" << rotorOrdenation[i] << "\", try again\n";
+			system("pause");
+			return 1;
+		}
+		for (int j = i + 1; j < stringLenght; j++) 
+		{
+			if (rotorOrdenation[i] == rotorOrdenation[j]) {
+				std::cout << "There is repeated characters\n";
+				system("pause");
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
+
+void mesageAnimation(std::string rotorOrdenation)
+{
+	for (short i = 0; i < rotorOrdenation.length(); i++)
+	{
+		if (rotorOrdenation[i] == 'A')
+		{
+			system("pause");
+			system("cls");
+			std::cout << "Preparing rotor A";
+			Sleep(200);
+			std::cout << ".";
+			Sleep(400);
+			std::cout << ".";
+			Sleep(200);
+			std::cout << ".";
+			std::cout << " Rotor A ready!\n";
+		}
+
+		if (rotorOrdenation[i] == 'B')
+		{
+			std::cout << "Preparing rotor B";
+			Sleep(200);
+			std::cout << ".";
+			Sleep(400);
+			std::cout << ".";
+			Sleep(200);
+			std::cout << ".";
+			std::cout << " Rotor B ready!\n";
+		}
+
+
+		if (rotorOrdenation[i] == 'C')
+		{
+			std::cout << "Preparing rotor C";
+			Sleep(200);
+			std::cout << ".";
+			Sleep(400);
+			std::cout << ".";
+			Sleep(200);
+			std::cout << ".";
+			std::cout << " Rotor C ready!\n";
+		}
+	}	
+
 }

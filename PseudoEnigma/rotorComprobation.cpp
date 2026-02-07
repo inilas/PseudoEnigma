@@ -3,8 +3,9 @@
 #include<string>
 #include<Windows.h>
 #include"getMessage.h"
-bool rotorComprobation(std::string rotorConfi,char letter)
+bool rotorComprobation(std::string rotorConfi,char letter, char notch)
 {
+
 	int count;
 	std::cin.clear();
 	getline(std::cin, rotorConfi);
@@ -37,7 +38,29 @@ bool rotorComprobation(std::string rotorConfi,char letter)
 		}
 	}
 	
+	while (true)
+	{
+
+		std::cout << "Introduce the character notch or press ENTER to default mode: ";
 		
+		notch=std::cin.get();
+		
+		if ((notch >= 'a' && notch <= 'z') || (notch >= 'A' && notch <= 'Z') || notch=='\n')
+		{
+			if (notch=='\n')
+			{
+				notch = 'Z';
+			}
+						break;
+		}
+
+		std::cout << "You must put a leter";
+		system("cls");
+	}
+
+
+	cleanNotch(notch);
+	system("cls");
 
 
 	std::ofstream rotorABCConfi;
@@ -49,7 +72,7 @@ bool rotorComprobation(std::string rotorConfi,char letter)
 	}
 	else
 	{
-		rotorABCConfi << cleanedMessage;
+		rotorABCConfi << cleanedMessage<<"\n"<<notch;
 		std::cout << "Configuration completed!";
 		rotorABCConfi.close();
 		Sleep(700);

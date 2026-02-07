@@ -6,8 +6,9 @@
 
 bool rotorBConfig()
 {
+	char notch='Z';
 	system("cls");
-	std::cout << "Rotor B configuration:\nPress \"Esc\"\n";
+	std::cout << "Rotor B configuration:\n";
 
 	while (true)
 	{
@@ -22,7 +23,7 @@ bool rotorBConfig()
 		std::cout << "Starting configuration of rotor B...\nInsert the characters ordenation:";
 		std::string rotorConfi;
 		Sleep(100);
-		if (rotorComprobation(rotorConfi, 'B'))
+		if (rotorComprobation(rotorConfi, 'B',notch))
 		{
 			return 1;
 		}

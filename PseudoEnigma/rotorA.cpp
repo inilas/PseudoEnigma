@@ -5,8 +5,9 @@
 #include<Windows.h>
 bool rotorAConfig()
 {
+	char notch='Z';
 	system("cls");
-	std::cout << "Rotor A configuration:\nPress \"Esc\"\n";
+	std::cout << "Rotor A configuration:\n";
 	
 	while (true)
 	{
@@ -21,7 +22,7 @@ bool rotorAConfig()
 			std::cout << "Starting configuration of rotor A...\nInsert the characters ordenation:";
 			std::string rotorConfi;
 			Sleep(100);
-			if (rotorComprobation(rotorConfi, 'A'))
+			if (rotorComprobation(rotorConfi, 'A', notch))
 			{
 				return 1;
 			}
