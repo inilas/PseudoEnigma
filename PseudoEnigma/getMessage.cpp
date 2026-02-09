@@ -94,8 +94,6 @@ void mesageAnimation(std::string rotorOrdenation)
 	{
 		if (rotorOrdenation[i] == 'A')
 		{
-			system("pause");
-			system("cls");
 			std::cout << "Preparing rotor A";
 			Sleep(200);
 			std::cout << ".";
@@ -131,5 +129,5 @@ void mesageAnimation(std::string rotorOrdenation)
 			std::cout << " Rotor C ready!\n";
 		}
 	}	
-
+	system("pause");
 }
