@@ -1,4 +1,6 @@
 #include<iostream>
+#include<string>
+#include<fstream>
 #include"rotorABCConfig.h"
 #include<Windows.h>
 void rotorConfig()
@@ -39,3 +41,21 @@ void rotorConfig()
 }
 
 
+void getRotorConf(std::string& wiring, char& notch, short i, std::string rotorOrdenation)
+{
+	std::ifstream rotorFile;
+	std::string fileName = "Rotors/Rotor" + std::string(1, rotorOrdenation[i]) + ".txt";
+	rotorFile.open(fileName);
+
+	std::cout << "Geting " << fileName << " data\n";
+	if (!rotorFile.is_open())
+	{
+		std::cout << "Critical error, can't open " << fileName;
+	}
+
+	std::getline(rotorFile, wiring);
+	std::string notchLetter;
+	std::getline(rotorFile, notchLetter);
+	rotorFile.close();
+	notch = notchLetter[0];
+}

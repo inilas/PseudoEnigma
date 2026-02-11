@@ -27,6 +27,22 @@ std::string cleanMessage (std::string rawMessage)
     for (int i = 0; i < rawMessage.length(); i++) {
         char c = rawMessage[i];
 
+		switch (c) {
+			case 'á': case 'à': c = 'a'; break;
+			case 'é': case 'è': c = 'e'; break;
+			case 'í': case 'ì': c = 'i'; break;
+			case 'ó': case 'ò': c = 'o'; break;
+			case 'ú': case 'ù': c = 'u'; break;
+			case 'ñ': c = 'n'; break;
+
+			case 'Á': case 'À': c = 'A'; break;
+			case 'É': case 'È': c = 'E'; break;
+			case 'Í': case 'Ì': c = 'I'; break;
+			case 'Ó': case 'Ò': c = 'O'; break;
+			case 'Ú': case 'Ù': c = 'U'; break;
+			case 'Ñ': c = 'N'; break;
+		}
+
         // Convertir manualmente a mayúscula
         if (c >= 'a' && c <= 'z') {
             c = c - ('a' - 'A');  
