@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "getMessage.h"     // Para funciones relacionadas con obtener mensajes
 #include "rotorConfig.h"    // Para funciones de configuración de rotores
 #include <Windows.h>        // Para Sleep() y system("pause")
@@ -86,7 +87,22 @@ void mesageDecrypt()
 
     // -------------------------------------------------------------
     // 4. Resultado final del mensaje descifrado
-    std::cout << "\nMensaje descifrado:\n";
+        std::ofstream cypherMessage("Message/decrypted.txt", std::ios::app);
+
+        for (size_t i = 1; i < var1.length() + 1 ; i++)
+        {
+            if (i % 5 == 0)            // Insertar espacio cada 5 letras
+            {
+                cypherMessage << var1[i - 1] << " ";
+            }
+            else
+            {
+                cypherMessage << var1[i - 1];
+            }
+        }
+        cypherMessage << "\n";         // Nueva línea al final
+        cypherMessage.close();
+    std::cout << "\nMessage decrypted:\n";
     std::cout << var1 << "\n";
 
     system("pause"); // Pausa final para que el usuario vea el resultado

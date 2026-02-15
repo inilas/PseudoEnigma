@@ -100,9 +100,9 @@ void messageEncrypt()
 
     // -------------------------------------------------------------
     // 5. Guardar mensaje encriptado en archivo "Message/xifrat.txt"
-    std::ofstream cypherMessage("Message/xifrat.txt", std::ios::app);
+    std::ofstream cypherMessage("Message/encrypted.txt", std::ios::app);
 
-    for (size_t i = 1; i < var1.length(); i++)
+    for (size_t i = 1; i < var1.length() + 1; i++)
     {
         if (i % 5 == 0)            // Insertar espacio cada 5 letras
         {
