@@ -86,7 +86,7 @@ void mesageDecrypt()
     
 
     // -------------------------------------------------------------
-    // 4. Resultado final del mensaje descifrado
+    // 4. Resultado final del mensaje descifrado, y guardar mensaje desencriptado en Message/decrypted.txt
         std::ofstream cypherMessage("Message/decrypted.txt", std::ios::app);
 
         for (size_t i = 1; i < var1.length() + 1 ; i++)

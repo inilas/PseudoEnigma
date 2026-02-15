@@ -99,7 +99,7 @@ void messageEncrypt()
     }
 
     // -------------------------------------------------------------
-    // 5. Guardar mensaje encriptado en archivo "Message/xifrat.txt"
+    // 5. Guardar mensaje encriptado en archivo "Message/encrypted.txt"
     std::ofstream cypherMessage("Message/encrypted.txt", std::ios::app);
 
     for (size_t i = 1; i < var1.length() + 1; i++)
