@@ -58,17 +58,16 @@ void mesageDecrypt()
 
     // -------------------------------------------------------------
     // 3. Descifrado (aplicar rotores en orden inverso)
-    for (int k = rotorOrdenation.length() - 1; k >= 0; k--) // Recorrer rotores al revés
-    {
+
         // Paso A: convertir cada letra usando el rotor k
         for (int i = 0; i < var1.length(); i++)
         {
             int index = -1;
 
             // Buscar la posición de la letra actual en el alfabeto del rotor
-            for (int j = 0; j < wiring[k].length(); j++)
+            for (int j = 0; j < wiring[2].length(); j++)
             {
-                if (wiring[k][j] == var1[i])
+                if (wiring[2][j] == var1[i])
                 {
                     index = j;
                     break;
@@ -82,8 +81,8 @@ void mesageDecrypt()
             }
         }
         // Mostrar el estado del mensaje después de pasar por cada rotor
-        std::cout << "After rotor " << k << ": " << var1 << "\n";
-    }
+        std::cout << "After decrypt algoritm: " << var1 << "\n";
+    
 
     // -------------------------------------------------------------
     // 4. Resultado final del mensaje descifrado
