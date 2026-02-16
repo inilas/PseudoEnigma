@@ -48,6 +48,7 @@ El programa simula un sistema de cifrado basado en rotores, inspirado en el func
 
 /Message
     xifrat.txt
+    desxifrat.txt
 
 main.cpp
 messageEncrypt.cpp
